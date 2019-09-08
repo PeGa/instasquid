@@ -7,13 +7,13 @@ Instantaneous Squid is a boringly simple Squid proxy server, without cache nor s
 
 Let's assume you've got a host in a different ISP (e.g. different country) and you want to SSH-tunnel into your private proxy in order to access it. This container provides a small and clean proxy for that purpose.
 
-## Requireents
+## Requirements
 
-In order to get instasquid working and being able to connect, you need three things:
+In order to get instasquid working and being able to connect to it, you need three things:
 
 - Docker 1.10.0+
 - SSH server with `AllowTcpForwarding` enabled
-- An `ssh` client
+- A `ssh` client
 ## Usage
 
 In the host where the proxy should be sitting, run the following commands:
@@ -30,7 +30,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 bf7c008cb2e0        instasquid:latest   "/bin/sh -c 'sleep 1…"   53 seconds ago      Up 52 seconds       127.0.0.1:3128->3128/tcp   instasquid_main_1
 ```
 
-Once the container is running, ssh to your host with the following command:
+Once the container is running, ssh into your host with the following command:
 
 ```
 ssh youruser@you_host_where_instasquid_is_running -NL 3128:127.0.0.1:3128
