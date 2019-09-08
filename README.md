@@ -41,3 +41,7 @@ After entering your password, you should be left with a blank cursor and no othe
 Go to your favorite browser, and set up your proxy to 127.0.0.1:3128 and set it to work with all protocols.
 
 After confirming your new proxy settings, your private proxy tunnel is working!
+
+## Removal
+
+`docker-compose down --rmi all --remove-orphans`
