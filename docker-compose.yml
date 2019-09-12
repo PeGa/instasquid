@@ -1,8 +1,9 @@
-version: "2"
+version: "2.4"
 
 services:
-  main:
+  instasquid:
     build: ./
     image: instasquid:latest
     ports:
       - "127.0.0.1:3128:3128"
+    container_name: instasquid
